@@ -15,10 +15,9 @@
     "clutch"
   ],
   "type": "module",
-  "main": "dist/svg-loader.js",
   "exports": {
     ".": {
-      "require": "./dist/svg-loader.js",
+      "require": "./dist/svg-loader.cjs",
       "import": "./dist/svg-loader.js"
     }
   },
@@ -27,7 +26,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "swc src --out-dir dist --config-file ./.swcrc --delete-dir-on-start --strip-leading-paths",
+    "build": "swc src --out-dir dist --config-file ./.swcrc --strip-leading-paths && swc src --out-dir dist --config-file ./.swcrc.esm --strip-leading-paths",
     "dev": "bun run build --watch",
     "lint": "eslint .",
     "format": "prettier --write .",

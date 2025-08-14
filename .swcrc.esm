@@ -2,15 +2,15 @@
   "$schema": "https://swc.rs/schema.json",
   "jsc": {
     "parser": {
-      "syntax": "ecmascript"
+      "syntax": "ecmascript",
     },
     "target": "es2021",
-    "externalHelpers": true
+    "externalHelpers": true,
   },
   "module": {
-    "type": "commonjs",
-    "outFileExtension": "cjs"
+    "type": "es6",
   },
+  "isModule": true,
   "minify": false,
-  "sourceMaps": false
+  "sourceMaps": false,
 }
